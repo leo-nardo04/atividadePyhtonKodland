@@ -117,7 +117,6 @@ class Enemy:
             self.direction = -1
         elif self.actor.left < self.patrol_min_x:
             self.direction = 1
-# ***
 
     def update_animation(self):
         self.animation_timer += 1
@@ -136,8 +135,6 @@ class Enemy:
 
 player = None
 
-
-# Listas de Animacao
 player_idle_r = ['astro_idle_1', 'astro_idle_2']
 player_walk_r = ['astro_walk_1', 'astro_walk_2']
 player_idle_l = ['astro_idle_left_1', 'astro_idle_left_2']
@@ -145,7 +142,6 @@ player_walk_l = ['astro_walk_left_1', 'astro_walk_left_2']
 enemy_walk_r = ['enemy_walk_1', 'enemy_walk_2']
 enemy_walk_l = ['enemy_walk_left_1', 'enemy_walk_left_2']
 
-# Cenario
 for i in range(13):
     platforms.append(Actor('ground', (32 + (i * 64), 568)))
 for i in range(3):
@@ -153,7 +149,6 @@ for i in range(3):
 for i in range(4):
     platforms.append(Actor('platform', (532 + (i * 64), 250)))
 
-# Criando os Botoes do Menu
 start_button = Rect((300, 225), (200, 50))  # (x, y), (largura, altura)
 sound_button = Rect((300, 325), (200, 50))
 quit_button = Rect((300, 425), (200, 50))
